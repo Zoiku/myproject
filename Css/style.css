@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#form header{
+    font-weight: bolder;
+    font-size: 40px;
+    margin-bottom: 1rem;
+    font-family: 'Assistant', sans-serif;
+}
+
+.form-container{
+    position: relative;
+    top: 3vh;
+    left: 5%;
+    width: 330px;
+    padding: 2rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2), 0px 0px 30px rgba(0, 0, 0, 0.2);
+    opacity: 0.7;
+}
+
+.field{
+    margin-bottom: 5vh;
+}
+
+.input-field{
+    position: relative;
+}
+
+.input-field input{
+    border: none;
+    outline: none;
+    padding-top: 30px;
+    border-bottom: 1px solid gray;
+    width: 100%;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: inherit;
+}
+
+.input-field input::placeholder{
+    text-align: right;
+    font-family: fontAwesome;
+}
+
+.input-field input:focus{
+    border-bottom: 1px solid black;
+}
+
+#form label{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.content-name{
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+#form input:focus + .label-name .content-name, #form input:valid + .label-name .content-name{
+    transform: translateY(-150%);
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+#form input:focus + .label-name::after, #form-input:valid + .label-name::after{
+    transform: translateX(0%);
+}
+
+.authentication{
+    display: flex;
+    margin-top: 1rem;
+}
+
+.authentication p {
+    width: 50%;
+    font-size: 10px;
+    font-weight: bolder;
+    text-align: justify;
+    margin-left: 10px;
+}
+
+.button{
+    font-family: 'Poppins', sans-serif;
+    background-color:#5b76ffa1;
+    width: 50%;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#login-button{
+    margin-top: 10vh;
+}
+
+.button:hover{
+    background-color:#5b76ff;
+}
+
+.button:active{
+    background-color:#5b76ffc1;
+}
+
+.error-message{
+    display: none;
+    color: red;
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+.signup-login{
+    margin-top: 5vh;
+    font-size: 13.5px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 4vh;
+}
+
+.signup-login > div{
+    margin-top: 3vh;
+}
+
+.nav-bar{
+    display: flex;
+    height: 6vh;
+    justify-content: flex-end;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.nav-bar li{
+    list-style: none;
+    cursor: pointer;
+}
+
+.nav-bar li:hover{
+    border-bottom: 2px solid #5b76ff49;
+    background-color:rgba(211, 211, 211, 0.126);
+}
+
+.nav-bar a{
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    width: 100px;
+    display: block;
+    padding: 10px;
+}
+
+#section-1{
+    height: 94vh;
+}
+
+#section-1 > div:nth-child(1) {
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+}
+
+.index-page-header{
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.index-page-about{
+    text-align: center;
+    line-height: 28px;
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    animation: index-page-about 3s ease forwards;
+}
+
+.index-page-about strong{
+    color: goldenrod;
+}
+
+@keyframes index-page-about{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+#next-section-button{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-bottom: 3%;
+    transform: translate(-50%, -50%);
+}
+
+#next-section-button span{
+    width: 14px;
+    display: block;
+    margin: -5px;
+    height: 14px;
+    border-bottom: 2px solid rgb(39, 39, 39);
+    border-right: 2px solid rgb(39, 39, 39);
+    transform: rotate(45deg);
+    animation: animate 0.8s infinite;
+}
+
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+#section-2{
+    height: 100vh;
+    position: relative;
+}
+
+.securities-table{
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    position: relative;
+    top: 6vh;
+    width: 90%;
+}
+
+table a{
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+table a:hover{
+    color: goldenrod;
+}
+
+table, th, th, td{
+    text-align: left;
+    border-collapse: collapse;
+    padding: 8px;
+    font-size: 13px;
+}
+
+tr:nth-child(1){
+    background-color: #272e54 !important;
+    color: goldenrod;
+}
+
+tr:nth-child(odd){
+    background-color: #5b76ff10;
+}
