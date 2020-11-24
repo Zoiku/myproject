@@ -19,7 +19,10 @@
     </head>
 
     <body>
-        <?php include_once '../Nav/nav.php'; ?>    
+        <ul class="nav-bar">
+            <li><a href="../index.php">Home</a></li>
+            <li><a class="nav-active-page" href="../Login/login.php">Login</a></li>
+        </ul>   
 
         <div class="form-container" id="login-form-container">
             <form action="login-verification.php" id="form" method='POST'>

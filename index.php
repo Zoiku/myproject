@@ -10,7 +10,7 @@
 
     <body>
         <ul class="nav-bar">
-            <li><a href="index.php">Home</a></li>
+            <li><a class="nav-active-page" href="index.php">Home</a></li>
             <li><a href="Login/login.php">Login</a></li>
         </ul>
 

@@ -114,10 +114,6 @@ html{
     margin-top: 10vh;
 }
 
-.button:hover{
-    background-color:#5b76ff;
-}
-
 .button:active{
     background-color:#5b76ffc1;
 }
@@ -141,6 +137,10 @@ html{
     margin-top: 3vh;
 }
 
+.nav-active-page{
+    background-color:rgba(211, 211, 211, 0.126);
+}
+
 .nav-bar{
     display: flex;
     height: 6vh;
@@ -157,7 +157,6 @@ html{
 
 .nav-bar li:hover{
     border-bottom: 2px solid #5b76ff49;
-    background-color:rgba(211, 211, 211, 0.126);
 }
 
 .nav-bar a{
