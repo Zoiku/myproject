@@ -14,8 +14,7 @@
 
         <!-- JQuery File -->
         <script src="../JQuery/jquery-3.5.1.js"></script>
-        <!-- Script.JS File -->
-        <script src=""></script>
+
     </head>
 
     <body>
@@ -53,7 +52,7 @@
             <div id="create-account" class="signup-login">
                 <hr>
                 <div>
-                    <p>Need an account?  <a href="../Signup/signup.php">Create account</a></p>
+                    <p>Need an account?  <a href="../SignUp/signup.php">Create account</a></p>
                 </div>
             </div>
         </div>
