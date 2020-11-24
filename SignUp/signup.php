@@ -15,10 +15,12 @@
     </head>
 
     <body>
-        <ul class="nav-bar">
-            <li><a href="../index.php">Home</a></li>
-            <li><a class="nav-active-page" href="../Login/login.php">Login</a></li>
-        </ul>
+        <nav class="nav-bar">
+            <a href="../index.php">Home</a>
+            <a class="nav-active-page" href="../Login/login.php">Login</a>
+
+            <div class="nav-animation"></div>
+        </nav>
 
         <div class="form-container" id="signup-form-container">
             <form id="form" method="POST" action="<?php echo $_SERVER["PHP_SELF"];?>" onsubmit="return validation()">

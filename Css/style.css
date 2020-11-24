@@ -139,24 +139,17 @@ html{
 
 .nav-active-page{
     background-color:rgba(211, 211, 211, 0.126);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 }
 
 .nav-bar{
     display: flex;
-    height: 6vh;
+    height: 45px;
     justify-content: flex-end;
     font-size: 15px;
     padding-left: 10px;
     padding-right: 10px;
-}
-
-.nav-bar li{
-    list-style: none;
-    cursor: pointer;
-}
-
-.nav-bar li:hover{
-    border-bottom: 2px solid #5b76ff49;
+    position: relative;
 }
 
 .nav-bar a{
@@ -166,6 +159,27 @@ html{
     width: 100px;
     display: block;
     padding: 10px;
+}
+
+.nav-animation{
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    transition: all 0.5s ease;
+    width: 100px;
+    display: none;
+    overflow: hidden;
+}
+
+nav a:nth-child(1):hover~.nav-animation{
+    display: inline;
+    left: 1140px;
+}
+
+nav a:nth-child(2):hover~.nav-animation{
+    display: inline;
+    left: 1240px;
 }
 
 #section-1{

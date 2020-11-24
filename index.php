@@ -9,10 +9,12 @@
     </head>
 
     <body>
-        <ul class="nav-bar">
-            <li><a class="nav-active-page" href="index.php">Home</a></li>
-            <li><a href="Login/login.php">Login</a></li>
-        </ul>
+        <nav class="nav-bar">
+            <a class="nav-active-page" href="index.php">Home</a>
+            <a href="Login/login.php">Login</a>
+
+            <div class="nav-animation"></div>
+        </nav>
 
         <section id="section-1">
             
