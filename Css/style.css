@@ -161,6 +161,10 @@ html{
     padding: 10px;
 }
 
+.nav-bar a:active~.nav-animation{
+    box-shadow: 0 7px 7px rgba(0, 0, 0, 0.5);
+}
+
 .nav-animation{
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
     position: absolute;
@@ -174,12 +178,12 @@ html{
 
 nav a:nth-child(1):hover~.nav-animation{
     display: inline;
-    left: 1140px;
+    left: 84.5%;
 }
 
 nav a:nth-child(2):hover~.nav-animation{
     display: inline;
-    left: 1240px;
+    left: 92%;
 }
 
 #section-1{
