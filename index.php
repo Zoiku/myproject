@@ -47,7 +47,6 @@
                     <th>Issued Shares</th>
                     <th>Autorised Shares</th>
                     <th></th>
-                    <th></th>
                     
                     <tr>
                         <td>AADs</td>
