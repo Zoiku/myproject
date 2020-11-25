@@ -4,3 +4,4 @@
 <th>Stated Capital</th>
 <th>Issued Shares</th>
 <th>Autorised Shares</th>
+<th></th>

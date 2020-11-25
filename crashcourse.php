@@ -30,24 +30,19 @@
 
             <div id="crash-course-grid">
                 <div id="video-1" class="video">
-                    <iframe src="https://www.youtube.com/embed/7EUbrFLef7M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                    </iframe>
-                    
+                    <iframe src="https://www.youtube.com/embed/7EUbrFLef7M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
                 <div id="video-2" class="video">
-                    <iframe src="https://www.youtube.com/embed/fn3y1hNVgA4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                    </iframe>
+                    <iframe src="https://www.youtube.com/embed/fn3y1hNVgA4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
                 <div id="video-3" class="video">
-                    <iframe src="https://www.youtube.com/embed/DF23jO8Y0n0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                    </iframe>
+                    <iframe src="https://www.youtube.com/embed/DF23jO8Y0n0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
                 <div id="video-4" class="video">
-                    <iframe src="https://www.youtube.com/embed/GnJCOof2HJk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                    </iframe>
+                    <iframe src="https://www.youtube.com/embed/GnJCOof2HJk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </section>

@@ -49,25 +49,25 @@
                     <th></th>
                     <th></th>
                     
-                        <tr>
-                            <td>AADs</td>
-                            <td>AngloGold Ashanti Depository Shares</td>
-                            <td>2004</td>
-                            <td>US $3.364.000.000</td>
-                            <td>0.98</td>
-                            <td>400.000.000</td>
-                            <td><a href="">more</a></td>
-                        </tr>
+                    <tr>
+                        <td>AADs</td>
+                        <td>AngloGold Ashanti Depository Shares</td>
+                        <td>2004</td>
+                        <td>US $3.364.000.000</td>
+                        <td>0.98</td>
+                        <td>400.000.000</td>
+                        <td><a href="">more</a></td>
+                    </tr>
 
-                        <tr>
-                            <td>AGA</td>
-                            <td>AngloGold Ashanti Limited Development Bank</td>
-                            <td>2004</td>
-                            <td>ZAR 49,721,223,077.55</td>
-                            <td>406.69</td>
-                            <td>600.000.000</td>
-                            <td><a href="">more</a></td>
-                        </tr>
+                    <tr>
+                        <td>AGA</td>
+                        <td>AngloGold Ashanti Limited Development Bank</td>
+                        <td>2004</td>
+                        <td>ZAR 49,721,223,077.55</td>
+                        <td>406.69</td>
+                        <td>600.000.000</td>
+                        <td><a href="">more</a></td>
+                    </tr>
                 </table>
             </div>
         </section>
