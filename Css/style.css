@@ -156,7 +156,7 @@ html{
     text-decoration: none;
     color: inherit;
     text-align: center;
-    width: 100px;
+    width: 130px;
     display: block;
     padding: 10px;
 }
@@ -171,23 +171,43 @@ html{
     bottom: 0;
     height: 3px;
     transition: all 0.5s ease;
-    width: 100px;
+    width: 130px;
     display: none;
-    overflow: hidden;
 }
 
 nav a:nth-child(1):hover~.nav-animation{
     display: inline;
-    left: 84.5%;
+    left: 80%;
 }
 
 nav a:nth-child(2):hover~.nav-animation{
     display: inline;
-    left: 92%;
+    left: 90%;
 }
 
+#new-nav a:nth-child(1):hover~.nav-animation{
+    display: inline;
+    left: 61%;
+}
+
+#new-nav a:nth-child(2):hover~.nav-animation{
+    display: inline;
+    left: 70%;
+}
+
+#new-nav a:nth-child(3):hover~.nav-animation{
+    display: inline;
+    left: 80%;
+}
+
+#new-nav a:nth-child(4):hover~.nav-animation{
+    display: inline;
+    left: 90%;
+}
+
+
 #section-1{
-    height: 94vh;
+    min-height: 94vh;
 }
 
 #section-1 > div:nth-child(1) {
@@ -270,10 +290,12 @@ table{
     position: relative;
     top: 6vh;
     width: 90%;
+    transition: all 0.3s ease;
+    font-size: 14px;
 }
 
 table a{
-    font-size: 12px;
+    text-decoration: none;
     transition: all 0.3s ease;
 }
 
@@ -285,7 +307,6 @@ table, th, th, td{
     text-align: left;
     border-collapse: collapse;
     padding: 8px;
-    font-size: 13px;
 }
 
 tr:nth-child(1){
@@ -295,4 +316,80 @@ tr:nth-child(1){
 
 tr:nth-child(odd){
     background-color: #5b76ff10;
+}
+
+.s-i-page-header{
+    text-align: center;
+}
+
+.s-i-page-header hr{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#s-i-page-table tr:nth-child(1){
+    background-color: rgb(70, 70, 70) !important;
+    color: #fff;
+}
+
+#delete-button{
+    opacity: 0.4;
+    transition: all 0.3s ease;
+}
+
+#delete-button:hover{
+    opacity: 0.6;
+}
+
+#crash-course-grid{
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    padding: 4rem;
+    grid-gap: 3rem;
+    grid-template-areas: 
+    'firstvideo secondvideo thirdvideo'
+    'firstvideo secondvideo thirdvideo'
+    'firstvideo fourthvideo fourthvideo'
+    'firstvideo fourthvideo fourthvideo'
+    ;
+}
+
+.video{
+    transition: transform 0.4s ease;
+}
+
+.video:hover{
+    transform: scale(1.1);
+}
+
+#video-1{
+    grid-area: firstvideo;
+}
+
+#video-2{
+    grid-area: secondvideo;
+}
+
+#video-3{
+    grid-area: thirdvideo;
+}
+
+#video-4{
+    grid-area: fourthvideo;
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s ease;
+}
+
+.favorite-button{
+    width: 14px;
+    transition: transform 0.3s ease;
+}
+
+.favorite-button:hover{
+    transform: scale(1.3);
 }

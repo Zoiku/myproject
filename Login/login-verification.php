@@ -2,7 +2,6 @@
     session_start();
 ?>
 
-
 <?php include_once '../Database-Connection/connection.php';
     $username = $_POST['username'];
     $userpassword = $_POST['password'];
@@ -11,8 +10,8 @@
     $result = mysqli_query($conn, $query);
 
     if(isset($_SESSION['username'])){
-        echo "<div class='success'>Hey there $_SESSION[username]!</div>";
-        echo "<a href='logout.php'><button>Log Out</button></a>";
+        echo "<script>location.href='../stockindex.php'</script>";     
+
     } 
     else{
         if(!mysqli_num_rows($result) > 0){
