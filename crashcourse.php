@@ -23,7 +23,7 @@
             <div><h1>TRADEX</h1></div>
 
             <div class="s-i-page-header">
-                <strong>HOW DOES A STOCK MARKET WORK?</strong>
+                <strong>HOW THE STOCK MARKET WORKS</strong>
                 <hr>
                 <p>A 4 video crash course to get you started on trading!</p>
             </div>

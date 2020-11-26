@@ -10,7 +10,6 @@
 
         <!-- JQuery File -->
         <script src="../JQuery/jquery-3.5.1.js"></script>
-        <!-- Script.JS File -->
         <script src="signupverification.js"></script>
     </head>
 
@@ -89,6 +88,8 @@
             if(isset($submit)){
                 $query = "INSERT INTO `users`(`fullname`, `username`, `userpassword`) VALUES ('$fullname', '$username', '$userpassword')";
                 $result = mysqli_query($conn, $query);
+
+                header("location:../Login/login.php");
             }else{
                 die();
             }

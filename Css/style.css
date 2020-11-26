@@ -182,7 +182,7 @@ nav a:nth-child(1):hover~.nav-animation{
 
 nav a:nth-child(2):hover~.nav-animation{
     display: inline;
-    left: 90%;
+    left: 89.8%;
 }
 
 #new-nav a:nth-child(1):hover~.nav-animation{

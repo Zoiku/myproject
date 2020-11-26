@@ -24,7 +24,7 @@
             <div class="s-i-page-header">
                 <strong>MY STOCK INDEX</strong>
                 <hr>
-                <p>Favorite your prefered stocks and build your very own Stock Index!</p>
+                <p>Build your very own Stock Index!</p>
             </div>
 
             <div class="securities-table" id="s-i-page-table">

@@ -1,21 +1,39 @@
+<?php 
+    session_start();
+?>
+
 <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
+        <title>TradEx</title>
 
         <link rel="stylesheet" href="./Css/style.css">
     </head>
 
     <body>
-   
-        <nav class="nav-bar">
-            <a class="nav-active-page" href="index.php">Home</a>
-            <a href="Login/login.php">Login</a>
-
-            <div class="nav-animation"></div>
-        </nav>
+        <?php 
+             if(isset($_SESSION['username'])){
+                print('
+                <nav class="nav-bar" id="new-nav">
+                    <a class="nav-active-page" href="index.php">Home</a>
+                    <a  href="stockindex.php">Index</a>
+                    <a  href="crashcourse.php">Crash Course</a>
+                    <a href="Login/logout.php">LogOut</a>
+                    <div class="nav-animation"></div>
+                </nav>'
+                );
+            }else{
+                print('
+                <nav class="nav-bar">
+                    <a class="nav-active-page" href="index.php">Home</a>
+                    <a href="Login/login.php">Login</a>
+                    <div class="nav-animation"></div>
+                </nav>'
+                );
+            }
+        ?>
 
         <section id="section-1">
             

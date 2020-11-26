@@ -11,7 +11,6 @@
 
     if(isset($_SESSION['username'])){
         echo "<script>location.href='../stockindex.php'</script>";     
-
     } 
     else{
         if(!mysqli_num_rows($result) > 0){
