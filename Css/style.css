@@ -115,7 +115,11 @@ html{
 }
 
 .button:active{
-    background-color:#5b76ffc1;
+    background-color:#5b76ff92;
+}
+
+.button:hover{
+    background-color:#5b76ff;
 }
 
 .error-message{
@@ -207,6 +211,8 @@ nav a:nth-child(2):hover~.nav-animation{
 
 #section-1{
     min-height: 94vh;
+    overflow: hidden;
+    width: 100%;
 }
 
 #section-1 > div:nth-child(1) {
@@ -225,9 +231,9 @@ nav a:nth-child(2):hover~.nav-animation{
     text-align: center;
     line-height: 28px;
     margin-top: 2%;
+    margin-bottom: 2%;
     margin-left: 5%;
     margin-right: 5%;
-    height: 130px;
     animation: index-page-about 3s ease forwards;
 }
 
@@ -247,8 +253,8 @@ nav a:nth-child(2):hover~.nav-animation{
 
 #next-section-button{
     position: absolute;
-    left: 50%;
     bottom: 0;
+    left: 50%;
     margin-bottom: 2%;
     transform: translate(-50%, -50%);
 }
@@ -343,7 +349,7 @@ tr:nth-child(odd){
 
 #crash-course-grid{
     display: grid;
-    height: 100vh;
+    height: 110vh;
     width: 100%;
     padding: 4rem;
     grid-gap: 3rem;

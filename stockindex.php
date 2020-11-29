@@ -1,3 +1,11 @@
+<?php 
+    session_start();
+
+    if(!isset($_SESSION['username'])){
+        header("Location: ./Login/logout.php");
+    }
+?>
+
 <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -7,7 +15,7 @@
 
         <link rel="stylesheet" href="./Css/style.css">
     </head>
-    
+
     <body>
         <nav class="nav-bar" id="new-nav">
             <a  href="index.php">Home</a>

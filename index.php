@@ -36,7 +36,6 @@
         ?>
 
         <section id="section-1">
-            
             <div><h1>TRADEX</h1></div>
 
             <img class="index-page-header" src="Assets/header1.jpg" alt="header">
@@ -48,50 +47,31 @@
                 <br>
                 <strong>Swipe down</strong> if you are only interested in viewing listed stocks.
             </div>
-            
+
             <a id="next-section-button" href="#section-2">
-                <span></span>
+            <span></span>
             </a>
         </section>
 
         <section id="section-2">
-
+            
             <div class="securities-table">
                 <table>
-                    <th>Symbol</th>
-                    <th>Company</th>
-                    <th>Listed Year</th>
-                    <th>Stated Capital</th>
-                    <th>Issued Shares</th>
-                    <th>Autorised Shares</th>
-                    <th></th>
-                    
-                    <tr>
-                        <td>AADs</td>
-                        <td>AngloGold Ashanti Depository Shares</td>
-                        <td>2004</td>
-                        <td>US $3.364.000.000</td>
-                        <td>0.98</td>
-                        <td>400.000.000</td>
-                        <td><a href="">more</a></td>
-                    </tr>
+                    <?php include_once './TableHeading/stock-index-table.php'?>   
+                     
+                    <?php include_once 'listing.php';
+                        $x = 0;
 
-                    <tr>
-                        <td>AGA</td>
-                        <td>AngloGold Ashanti Limited Development Bank</td>
-                        <td>2004</td>
-                        <td>ZAR 49,721,223,077.55</td>
-                        <td>406.69</td>
-                        <td>600.000.000</td>
-                        <td><a href="">more</a></td>
-                    </tr>
+                        while($x < 10){
+                            $stock = new Listing('abs', 'Abba Company Limited', 2003, 400000, 300, 200);
+                            $stock->printhtml();
+                            $x = $x+1;
+                        }
+                    ?>
                 </table>
             </div>
         </section>
 
-
-        <footer>
-
-        </footer>
     </body>
+
 </html>
