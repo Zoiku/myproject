@@ -21,7 +21,11 @@
             <a  href="index.php">Home</a>
             <a class="nav-active-page" href="stockindex.php">Index</a>
             <a  href="crashcourse.php">Crash Course</a>
-            <a href="Login/logout.php">LogOut</a>
+            <ul>
+                <li><a href="#"><?php echo "{$_SESSION['username']}"; ?></a>
+                    <ul><li><a id="account-logout" href="./Login/logout.php">Sign Out</a></li></ul>
+                </li>
+            </ul>
 
             <div class="nav-animation"></div>
         </nav>
@@ -37,17 +41,7 @@
 
             <div class="securities-table" id="s-i-page-table">
                 <table>
-                    <?php include './TableHeading/stock-index-table.php' ?>
-                    
-                    <tr>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td>--</td>
-                        <td><a href="#"><img class="delete_button" src="./Assets/delete_button.png" alt=""></a></td>
-                    </tr>
+                    <?php include './TableHeading/stock-index-table.php';?>  
                 </table>
             </div>
         </section>
@@ -55,29 +49,21 @@
         <section id="section-2">
             <div class="securities-table">
                 <table>
-                    <?php include './TableHeading/stock-listing-table.php' ?>
+                    <?php 
+                        include_once './TableHeading/stock-home-2-table.php' ;
+                        include_once './Listing/Listing-1.php';
+                        include_once './Listing/Listing-2.php';  
 
-                    <tr>
-                        <td>AADs</td>
-                        <td>AngloGold Ashanti Depository Shares</td>
-                        <td>2004</td>
-                        <td>US $3.364.000.000</td>
-                        <td>0.98</td>
-                        <td>400.000.000</td>
-                        <td><a href="#">more</a></td>
-                        <td><a href="#"><img class="favorite-button" src="./Assets/add.png" alt=""></a></td>
-                    </tr>
+                        $gseEndpoint_1_URL = "https://dev.kwayisi.org/apis/gse/equities/";
+                        $gseEndpoint_1_JSON = file_get_contents($gseEndpoint_1_URL);
+                        $gseEndpoint_1_DECODE = json_decode($gseEndpoint_1_JSON);
 
-                    <tr>
-                        <td>AGA</td>
-                        <td>AngloGold Ashanti Limited Development Bank</td>
-                        <td>2004</td>
-                        <td>ZAR 49,721,223,077.55</td>
-                        <td>406.69</td>
-                        <td>600.000.000</td>
-                        <td><a href="">more</a></td>
-                        <td><a href=""><img class="favorite-button" src="./Assets/add.png" alt=""></a></td>
-                    </tr>
+                        foreach($gseEndpoint_1_DECODE as $data){
+                          include './Api-Data/apiData.php';
+                            $security = new ListingV2($symbol, $name, $industry, $capital, $email, $website, $shares, $price);
+                            $security->printhtml();
+                        }
+                    ?>
                 </table>
             </div>
         </section>

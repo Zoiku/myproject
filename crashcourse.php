@@ -18,13 +18,17 @@
 
     <body>
         <nav class="nav-bar" id="new-nav">
-            <a  href="index.php">Home</a>
-            <a  href="stockindex.php">Index</a>
-            <a class="nav-active-page" href="crashcourse.php">Crash Course</a>
-            <a href="Login/logout.php">LogOut</a>
+                <a  href="index.php">Home</a>
+                <a  href="stockindex.php">Index</a>
+                <a  class="nav-active-page" href="crashcourse.php">Crash Course</a>
+                <ul>
+                    <li><a href="#"><?php echo "{$_SESSION['username']}"; ?></a>
+                        <ul><li><a id="account-logout" href="./Login/logout.php">Sign Out</a></li></ul>
+                    </li>
+                </ul>
 
-            <div class="nav-animation"></div>
-        </nav>
+                <div class="nav-animation"></div>
+            </nav>
 
         <section id="section-1">
             
@@ -38,11 +42,11 @@
 
             <div id="crash-course-grid">
                 <div id="video-1" class="video">
-                    <iframe src="https://www.youtube.com/embed/7EUbrFLef7M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/fn3y1hNVgA4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
                 <div id="video-2" class="video">
-                    <iframe src="https://www.youtube.com/embed/fn3y1hNVgA4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/7EUbrFLef7M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
                 <div id="video-3" class="video">
@@ -50,10 +54,16 @@
                 </div>
 
                 <div id="video-4" class="video">
-                    <iframe src="https://www.youtube.com/embed/GnJCOof2HJk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/_-dD416-cqw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
     </body>
 
 </html>
+
+<?php 
+    
+
+
+?>

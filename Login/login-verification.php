@@ -2,7 +2,7 @@
     session_start();
 ?>
 
-<?php include_once '../Database-Connection/connection.php';
+<?php require_once '../Database-Connection/connection.php';
     $username = $_POST['username'];
     $userpassword = $_POST['password'];
 

@@ -141,45 +141,44 @@ html{
     margin-top: 3vh;
 }
 
-.nav-active-page{
-    background-color:rgba(211, 211, 211, 0.126);
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-}
-
 .nav-bar{
     display: flex;
     height: 45px;
     justify-content: flex-end;
     font-size: 15px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0px 10px;
     position: relative;
+}
+
+.nav-active-page{
+    background-color:rgba(211, 211, 211, 0.126);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 }
 
 .nav-bar a{
     text-decoration: none;
-    color: inherit;
     text-align: center;
-    width: 130px;
+    width: 135px;
     display: block;
     padding: 10px;
+    transition: all 0.3s ease;
 }
 
-.nav-bar a:active~.nav-animation{
-    box-shadow: 0 7px 7px rgba(0, 0, 0, 0.5);
+nav ul li{
+    list-style: none;
+    position: relative;
 }
 
-.nav-animation{
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
-    position: absolute;
-    bottom: 0;
-    height: 3px;
-    transition: all 0.5s ease;
-    width: 130px;
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul {
     display: none;
+    position: absolute;
 }
 
-nav a:nth-child(1):hover~.nav-animation{
+/* nav a:nth-child(1):hover~.nav-animation{
     display: inline;
     left: 80%;
 }
@@ -202,12 +201,7 @@ nav a:nth-child(2):hover~.nav-animation{
 #new-nav a:nth-child(3):hover~.nav-animation{
     display: inline;
     left: 80%;
-}
-
-#new-nav a:nth-child(4):hover~.nav-animation{
-    display: inline;
-    left: 89.8%;
-}
+} */
 
 #section-1{
     min-height: 94vh;
@@ -267,7 +261,7 @@ nav a:nth-child(2):hover~.nav-animation{
     border-bottom: 2px solid rgb(39, 39, 39);
     border-right: 2px solid rgb(39, 39, 39);
     transform: rotate(45deg);
-    animation: animate 0.8s infinite;
+    animation: animate 1s infinite;
 }
 
 @keyframes animate{
@@ -297,12 +291,13 @@ table{
     width: 90%;
     transition: all 0.3s ease;
     font-size: 14px;
+    margin-bottom: 4rem;
 }
 
 table a{
     text-decoration: none;
     color: #272e54;
-    transition: all 0.3s ease;
+    transition: color 0.2s ease;
 }
 
 table a:hover{
@@ -310,7 +305,7 @@ table a:hover{
 }
 
 table, th, th, td{
-    text-align: left;
+    text-align: center;
     border-collapse: collapse;
     padding: 8px;
 }
@@ -321,7 +316,15 @@ tr:nth-child(1){
 }
 
 tr:nth-child(odd){
-    background-color: #5b76ff10;
+    background-color: rgba(222, 222, 222, 0.372);
+}
+
+.add-button{
+    transition: transform 0.2s ease;
+}
+
+.add-button:hover{
+    transform: scale(1.4);
 }
 
 .s-i-page-header{
@@ -338,26 +341,17 @@ tr:nth-child(odd){
     color: #fff;
 }
 
-.delete_button{
-    opacity: 0.4;
-    transition: all 0.3s ease;
-}
-
-.delete_button:hover{
-    opacity: 0.6;
-}
-
 #crash-course-grid{
     display: grid;
-    height: 110vh;
+    min-height: 230vh;
     width: 100%;
-    padding: 4rem;
+    padding: 3rem 5rem;
     grid-gap: 3rem;
     grid-template-areas: 
-    'firstvideo secondvideo thirdvideo'
-    'firstvideo secondvideo thirdvideo'
-    'firstvideo fourthvideo fourthvideo'
-    'firstvideo fourthvideo fourthvideo'
+    'firstvideo  firstvideo'
+    'secondvideo thirdvideo'
+    'secondvideo thirdvideo'
+    'fourthvideo fourthvideo'
     ;
 }
 
@@ -391,11 +385,4 @@ iframe{
     transition: all 0.4s ease;
 }
 
-.favorite-button{
-    width: 17px;
-    transition: transform 0.2s ease;
-}
 
-.favorite-button:hover{
-    transform: scale(1.5);
-}

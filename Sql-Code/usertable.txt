@@ -1,6 +1,0 @@
-Create table users(
-    userid int AUTO_INCREMENT PRIMARY KEY, 
-    fullname text not null,
-    username varchar(30) not null,
-    userpassword varchar(30) not null
-);
