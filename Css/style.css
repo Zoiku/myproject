@@ -297,7 +297,7 @@ table{
 
 table a{
     text-decoration: none;
-    color: #272e54;
+    color: rgb(172, 131, 25);
     transition: color 0.2s ease;
 }
 
@@ -306,7 +306,7 @@ table a:hover{
 }
 
 table, th, th, td{
-    text-align: center;
+    text-align: left;
     border-collapse: collapse;
     padding: 8px;
 }
@@ -344,7 +344,7 @@ tr:nth-child(odd){
 
 #crash-course-grid{
     display: grid;
-    min-height: 230vh;
+    min-height: 200vh;
     width: 100%;
     padding: 3rem 5rem;
     grid-gap: 3rem;
