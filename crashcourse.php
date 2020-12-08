@@ -37,24 +37,28 @@
             <div class="s-i-page-header">
                 <strong>HOW THE STOCK MARKET WORKS</strong>
                 <hr>
-                <p>A 4 video crash course to get you started on trading!</p>
+                <p>A 6 video crash course to get you started on trading!</p>
             </div>
 
             <div id="crash-course-grid">
                 <div id="video-1" class="video">
-                    <iframe src="https://www.youtube.com/embed/fn3y1hNVgA4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/GnJCOof2HJk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
                 <div id="video-2" class="video">
-                    <iframe src="https://www.youtube.com/embed/7EUbrFLef7M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/VvRKG4pghBA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
                 <div id="video-3" class="video">
-                    <iframe src="https://www.youtube.com/embed/DF23jO8Y0n0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/yIX6d79Q4aA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
                 <div id="video-4" class="video">
-                    <iframe src="https://www.youtube.com/embed/_-dD416-cqw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/BsZ3RUSDL8k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        
+                </div>
+                
+                <div id="video-5" class="video">
+                    <iframe src="https://www.youtube.com/embed/CMQLdJa64Wk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                
                 </div>
             </div>
         </section>

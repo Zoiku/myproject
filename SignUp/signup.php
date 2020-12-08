@@ -86,7 +86,7 @@
             $submit = $_POST['submit-btn'];
 
             if(isset($submit)){
-                $query = "INSERT INTO `users`(`fullname`, `username`, `userpassword`) VALUES ('$fullname', '$username', '$userpassword')";
+                $query = "INSERT INTO `users` VALUES ('$fullname', '$username', '$userpassword')";
                 $result = mysqli_query($conn, $query);
 
                 header("location:../Login/login.php");

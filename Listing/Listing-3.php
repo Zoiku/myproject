@@ -1,5 +1,5 @@
 <?php 
-    class ListingV2 extends Listing{
+    class ListingV3 extends Listing{
 
         public function __construct($symbol, $company, $industry, $totalCapital, $email, $website, $totalShares, $currentPrice){
             parent::__construct($symbol, $company, $industry, $totalCapital, $email, $website, $totalShares, $currentPrice);
@@ -11,10 +11,9 @@
                     <td>{$this->industry}</td>
                     <td>{$this->totalCapital}</td>
                     <td><a href='mailto:{$this->email}'>{$this->email}</a></td>
-                    <td><a href='https://{$this->website}' target='__blank'>{$this->website}</a></td>
                     <td>{$this->totalShares}</td>
                     <td>{$this->currentPrice}</td>
-                    <td><a href="stockindex.php?symboltoadd={$this->symbol}"><img class="action-button" src="./Assets/add.png" alt="img"></a></td>
+                    <td><a href="#?symbol={$this->symbol}"><img class="action-button" src="./Assets/delete_button.png" alt="img"></a></td>
                 </tr>
             EOT;
         }

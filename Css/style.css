@@ -206,7 +206,6 @@ nav a:nth-child(2):hover~.nav-animation{
 
 #section-1{
     min-height: 94vh;
-    overflow: hidden;
     width: 100%;
 }
 
@@ -277,8 +276,9 @@ nav a:nth-child(2):hover~.nav-animation{
 }
 
 #section-2{
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
+    margin-bottom: 20vh;
 }
 
 .securities-table{
@@ -320,12 +320,14 @@ tr:nth-child(odd){
     background-color: rgba(222, 222, 222, 0.372);
 }
 
-.add-button{
-    transition: transform 0.2s ease;
+.action-button{
+    opacity: 0.4;
+    transition: all 0.2s ease;
 }
 
-.add-button:hover{
-    transform: scale(1.4);
+.action-button:hover{
+    opacity: 0.6;
+    transform: scale(1.2);
 }
 
 .s-i-page-header{
@@ -346,18 +348,20 @@ tr:nth-child(odd){
     display: grid;
     min-height: 200vh;
     width: 100%;
-    padding: 3rem 5rem;
+    padding: 2rem 5rem;
     grid-gap: 3rem;
     grid-template-areas: 
     'firstvideo  firstvideo'
-    'secondvideo thirdvideo'
-    'secondvideo thirdvideo'
-    'fourthvideo fourthvideo'
+    'secondvideo secondvideo'
+    'thirdvideo fourthvideo'
+    'fifthvideo fifthvideo'
     ;
+    margin-bottom: 20vh;
 }
 
 .video{
     transition: transform 0.4s ease;
+    height: 41vh;
 }
 
 .video:hover{
@@ -380,10 +384,16 @@ tr:nth-child(odd){
     grid-area: fourthvideo;
 }
 
+#video-5{
+    grid-area: fifthvideo;
+}
+
+#video-6{
+    grid-area: sixthvideo;
+}
+
 iframe{
     width: 100%;
     height: 100%;
     transition: all 0.4s ease;
 }
-
-
