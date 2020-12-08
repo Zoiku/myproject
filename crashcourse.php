@@ -26,8 +26,6 @@
                         <ul><li><a id="account-logout" href="./Login/logout.php">Sign Out</a></li></ul>
                     </li>
                 </ul>
-
-                <div class="nav-animation"></div>
             </nav>
 
         <section id="section-1">

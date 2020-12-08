@@ -21,8 +21,6 @@
         <nav class="nav-bar">
             <a href="../index.php">Home</a>
             <a class="nav-active-page" href="../Login/login.php">Login</a>
-
-            <div class="nav-animation"></div>
         </nav>   
 
         <div class="form-container" id="login-form-container">

@@ -25,8 +25,6 @@
                                 <ul><li><a id='account-logout' href='./Login/logout.php'>Sign Out</a></li></ul>
                             </li>
                         </ul>
-
-                        <div class='nav-animation'></div>
                     </nav>"
                 );
             }else{
@@ -34,7 +32,6 @@
                 <nav class="nav-bar">
                     <a class="nav-active-page" href="index.php">Home</a>
                     <a href="./Login/login.php">Login</a>
-                    <div class="nav-animation"></div>
                 </nav>'
                 );
             }
