@@ -361,7 +361,7 @@ tr:nth-child(odd){
 
 .video{
     transition: transform 0.4s ease;
-    height: 41vh;
+    height: 40vh;
 }
 
 .video:hover{
@@ -386,10 +386,6 @@ tr:nth-child(odd){
 
 #video-5{
     grid-area: fifthvideo;
-}
-
-#video-6{
-    grid-area: sixthvideo;
 }
 
 iframe{
