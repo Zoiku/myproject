@@ -14,6 +14,9 @@
         <title>My Stock Index</title>
 
         <link rel="stylesheet" href="./Css/style.css">
+        
+        <script src="../JQuery/jquery-3.5.1.js"></script>
+        <script src=".JS/script.js"></script>
     </head>
 
     <body>
@@ -79,6 +82,10 @@
                         $myindex_read_result_check = mysqli_num_rows($myindex_read_result);
                         
                         if($myindex_read_result_check > 0){
+                            $num_stocks = 0;
+                            $direct_stock_index = 0;
+                            $indirect_stock_index = 0;
+
                             while($rows = mysqli_fetch_assoc($myindex_read_result)){
                                 foreach($gseEndpoint_1_DECODE as $data){
                                     include './Api-Data/apiData.php';
@@ -86,8 +93,11 @@
                                     if($rows['symbol'] === $symbol){                                        
                                         $security = new ListingV3($symbol, $name, $industry, $capital, $email, $website, $shares, $price);
                                         $security->printhtml();
+                                        $num_stocks += 1;
+                                        $direct_stock_indext = $direct_stock_indext + $price; 
                                     }
                                 }
+                                $indirect_stock_index = $direct_stock_index/$num_stocks;
                             }
                         }else {
                             ListingV3::empty();
