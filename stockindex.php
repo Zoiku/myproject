@@ -41,11 +41,11 @@
                 <table>
                     <?php 
                         include './Database-Connection/connection.php';
-                        include_once './TableHeading/stock-index-table.php';
                         include_once './Listing/Listing-1.php';
                         include_once './Listing/Listing-2.php'; 
                         include_once './Listing/Listing-3.php';
-                        
+
+                        include_once './TableHeading/stock-index-table.php';
                         $username = $_SESSION['username'];
                         
                         if(isset($_GET['symbol_to_insert'])){
@@ -59,10 +59,16 @@
                                 $sql = "INSERT INTO `myindex`(`username`, `symbol`) VALUES ('$username', '$symbol')";
                                 $result = mysqli_query($conn, $sql);
                                 $symbol = NULL;
-                            } else {
-                                ListingV3::empty();
-                            }
-                        } 
+                            } 
+                        }
+                        
+                        if(isset($GET['symbol_to_delete'])){
+                            $symbol = $GET['symbol_to_delete'];
+
+                            $myindex_delete_sql = "DELETE FROM `myindex` WHERE username = '$username' and symbol='$symbol' LIMIT 1";
+                            $myindex_delete_result = mysqli_query($conn, $myindex_delete_sql);
+                            $myindex_delete_result_check = mysqli_num_rows($myindex_delete_result);                            
+                        }
 
                         $gseEndpoint_1_URL = "https://dev.kwayisi.org/apis/gse/equities/";
                         $gseEndpoint_1_JSON = file_get_contents($gseEndpoint_1_URL);
@@ -83,6 +89,8 @@
                                     }
                                 }
                             }
+                        }else {
+                            ListingV3::empty();
                         }                                           
                     ?>  
                 </table>
@@ -104,6 +112,8 @@
                 </table>
             </div>
         </section>
+
+        <?php include_once './Footer/footer.php'; ?>
     </body>
 </html>
 

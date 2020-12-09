@@ -72,7 +72,8 @@
                 </table>
             </div>
         </section>
-
+        
+        <?php include_once './Footer/footer.php'; ?>
     </body>
 
 </html>

@@ -25,7 +25,7 @@
 
         <div class="form-container" id="login-form-container">
             <form action="login-verification.php" id="form" method='POST'>
-                <header>Login up</header>
+                <header>LogIn</header>
 
                 <div class="field">
                     <div class="input-field">

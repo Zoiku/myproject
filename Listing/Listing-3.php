@@ -28,7 +28,7 @@
                     <td>--</td>
                     <td>--</td>
                     <td>--</td>
-                    <td><a><img class='action-button' src='./Assets/delete_button.png' alt='img'></a></td>
+                    <td>--</td>
                 </tr>
                 ";
         }   

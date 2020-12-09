@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2020 at 09:22 PM
+-- Generation Time: Dec 08, 2020 at 01:51 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -26,11 +26,39 @@ USE `myproject`;
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `myindex`
+--
+
+CREATE TABLE `myindex` (
+  `indexID` int(11) NOT NULL,
+  `username` varchar(30) NOT NULL,
+  `symbol` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `myindex`
+--
+
+INSERT INTO `myindex` (`indexID`, `username`, `symbol`) VALUES
+(4, 'Zoiku2002', 'ADB'),
+(5, 'Zoiku2002', 'AADS'),
+(6, 'Mzoiku', 'UNIL'),
+(7, 'Mzoiku', 'AADS'),
+(8, 'Mzoiku', 'ADB'),
+(9, 'Mawuli', 'AADS'),
+(10, 'Mawuli', 'UNIL'),
+(11, 'Mzoiku', 'EGH'),
+(12, 'Mzoiku', 'EGL'),
+(14, 'Mawuli', 'DIGICUT'),
+(15, 'Mawuli', 'ALW');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
-  `userid` int(11) NOT NULL,
   `fullname` text NOT NULL,
   `username` varchar(30) NOT NULL,
   `userpassword` varchar(30) NOT NULL
@@ -40,25 +68,47 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
+INSERT INTO `users` (`fullname`, `username`, `userpassword`) VALUES
+('Mawuli Zoiku', 'Mawuli', 'Zoiku123x'),
+('Mark Zoiku', 'Mzoiku', 'Zoiku123x'),
+('Dinam Zoiku', 'Zoiku2002', 'Zoiku2002');
+
 --
 -- Indexes for dumped tables
 --
 
 --
+-- Indexes for table `myindex`
+--
+ALTER TABLE `myindex`
+  ADD PRIMARY KEY (`indexID`),
+  ADD KEY `username` (`username`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`userid`);
+  ADD PRIMARY KEY (`username`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT for table `myindex`
 --
-ALTER TABLE `users`
-  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+ALTER TABLE `myindex`
+  MODIFY `indexID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `myindex`
+--
+ALTER TABLE `myindex`
+  ADD CONSTRAINT `myindex_ibfk_1` FOREIGN KEY (`username`) REFERENCES `users` (`username`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
