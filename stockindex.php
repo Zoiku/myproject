@@ -68,12 +68,14 @@
                                 } 
                             }
                             
-                            if(isset($GET['symbol_to_delete'])){
-                                $symbol = $GET['symbol_to_delete'];
+                            if(isset($_GET['symbol_to_delete'])){
+                                $symbol = $_GET['symbol_to_delete']; 
 
-                                $myindex_delete_sql = "DELETE FROM `myindex` WHERE username = '$username' and symbol='$symbol' LIMIT 1";
+                                $myindex_delete_sql = "DELETE FROM `myindex` WHERE username='$username' and symbol = '$symbol';";
                                 $myindex_delete_result = mysqli_query($conn, $myindex_delete_sql);
-                                $myindex_delete_result_check = mysqli_num_rows($myindex_delete_result);                            
+                                $myindex_delete_result_check = mysqli_num_rows($myindex_delete_result);  
+                                
+                                $symbol = NULL;
                             }
 
                             $gseEndpoint_1_URL = "https://dev.kwayisi.org/apis/gse/equities/";
@@ -97,14 +99,27 @@
                                             $security = new ListingV3($symbol, $name, $industry, $capital, $email, $website, $shares, $price);
                                             $security->printhtml();
                                             $num_stocks += 1;
-                                            $direct_stock_indext = $direct_stock_indext + $price; 
+                                            $direct_stock_index = $direct_stock_index + $price; 
                                         }
                                     }
                                     $indirect_stock_index = $direct_stock_index/$num_stocks;
-                                }
+                                } echo 
+                                "
+                                    <p>
+                                        Securities: $num_stocks</br>
+                                        Direct Index: $direct_stock_index</br>
+                                        Indirect Index: $indirect_stock_index</br>
+                                    </p>
+                                ";
                             }else {
                                 ListingV3::empty();
-                            }                                           
+                                echo 
+                                "
+                                    <p>
+                                        Get Started By Adding a Stock To Your Index </br>
+                                    </p>
+                                ";
+                            }     
                         ?>  
                     </table>
                 </div>
@@ -117,10 +132,11 @@
                             include_once './TableHeading/stock-home-2-table.php' ;
 
                             foreach($gseEndpoint_1_DECODE as $data){
-                            include './Api-Data/apiData.php';
+                                include './Api-Data/apiData.php';
                                 $security = new ListingV2($symbol, $name, $industry, $capital, $email, $website, $shares, $price);
                                 $security->printhtml();
                             }
+
                         ?>
                     </table>
                 </div>

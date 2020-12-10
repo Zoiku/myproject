@@ -65,7 +65,7 @@
                 
                 <div class="authentication">
                     <button name='submit-btn' type='submit' class='button' id='signup-button'>Get Started</button>
-                    <p>By clicking this thing you are agreeing to all <a href="#">terms and conditions</a></p>
+                    <p>By clicking this button you are agreeing to all <a href="#">terms and conditions</a></p>
                 </div>
             </form>
 
