@@ -61,11 +61,13 @@
                                 $myindex_insert_result = mysqli_query($conn, $myindex_insert_sql);
                                 $myindex_insert_result_check = mysqli_num_rows($myindex_insert_result);
                             
-                                if($myindex_insert_result_check == 0){
+                                if($myindex_insert_result_check < 1){
                                     $sql = "INSERT INTO `myindex`(`username`, `symbol`) VALUES ('$username', '$symbol')";
                                     $result = mysqli_query($conn, $sql);
                                     $symbol = NULL;
-                                } 
+                                } else{
+                                    echo "<script>alert('Index Already Added')</script>";
+                                }
                             }
                             
                             if(isset($_GET['symbol_to_delete'])){
@@ -102,7 +104,7 @@
                                             $direct_stock_index = $direct_stock_index + $price; 
                                         }
                                     }
-                                    $indirect_stock_index = $direct_stock_index/$num_stocks;
+                                    $indirect_stock_index = round(($direct_stock_index/$num_stocks),2);
                                 } echo 
                                 "
                                     <p>

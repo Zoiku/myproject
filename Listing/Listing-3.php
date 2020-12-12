@@ -13,7 +13,7 @@
                     <td><a href='mailto:{$this->email}'>{$this->email}</a></td>
                     <td>{$this->totalShares}</td>
                     <td>{$this->currentPrice}</td>
-                    <td><a href="stockindex.php?symbol_to_delete={$this->symbol}"><img class="action-button" src="./Assets/delete_button.png" alt="img"></a></td>
+                    <td><a class="delete-stock" href="stockindex.php?symbol_to_delete={$this->symbol}"><img class="action-button" src="./Assets/delete_button.png" alt="img"></a></td>
                 </tr>
             EOT;
         }

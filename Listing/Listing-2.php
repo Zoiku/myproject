@@ -14,7 +14,7 @@
                     <td><a href='https://{$this->website}' target='__blank'>{$this->website}</a></td>
                     <td>{$this->totalShares}</td>
                     <td>{$this->currentPrice}</td>
-                    <td><a href="stockindex.php?symbol_to_insert={$this->symbol}"><img class="action-button" src="./Assets/add.png" alt="img"></a></td>
+                    <td><a class="add-stock" href="stockindex.php?symbol_to_insert={$this->symbol}"><img class="action-button" src="./Assets/add.png" alt="img"></a></td>
                 </tr>
             EOT;
         }
